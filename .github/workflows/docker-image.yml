@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v1
     - name: Build the Docker image & push it to Dockerhub
       run: |
         echo "${{ secrets.DOCKERPWD }}" | docker login -u "akramulislam" --password-stdin
