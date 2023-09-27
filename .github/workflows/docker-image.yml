@@ -22,11 +22,14 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
-        uses: docker/build-push-action@v5
+        -
+  name: Build and push
+  uses: docker/build-push-action@v5
   with:
     context: .  # Use the current directory as the build context
     file: ./Dockerfile  # Path to your Dockerfile
     push: true
     tags: |
-      akramulislam/githubaction:v1  # Specify the image tag
+      akramulislam/githubaction:latest  # Specify the image tag
+
           
