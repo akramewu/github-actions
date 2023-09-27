@@ -26,4 +26,4 @@ jobs:
           file: ./Dockerfile  # Path to your Dockerfile
           push: true
           tags: |
-             akramulislam/githubaction:v1  # Specify the image tag
+             akramulislam/githubaction:v1
