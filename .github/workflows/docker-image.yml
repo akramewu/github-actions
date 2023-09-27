@@ -16,5 +16,6 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build the Docker image & push it to Dockerhub
       run: |
-        echo "${{ secrets.DOCKERPWD }}" | docker login -u "
-        docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+        echo "${{ secrets.DOCKERPWD }}" | docker login -u "akramulislam" --password-stdin
+        docker image build -t webmagic1/flaskapp:v1 .
+        docker push webmagic1/flaskapp:v1
