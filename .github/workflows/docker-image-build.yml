@@ -1,0 +1,24 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: none # [ "main" ]
+  pull_request:
+    branches: none # [ "main" ]
+
+    # Allows you to run this workflow manually from the Actions tab
+  workflow_displatch:
+
+jobs:
+
+
+  build-container:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Build the Docker image
+      working-directory: 
+      run: docker build . --file Dockerfile --tag my-app-webmagic:$(date +%s)
