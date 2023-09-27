@@ -25,10 +25,6 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v5
         with:
-        context: .  # Use the current directory as the build context
-          file: ./Dockerfile  # Path to your Dockerfile
+          image: akramulislam/githubaction
           push: true
-          tags: |
-             akramulislam/githubaction:latest  # Specify the image tag
-
-          
+          tags: user/app:latest
